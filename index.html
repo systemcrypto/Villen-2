@@ -1,1 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Join #1 Global Trading Community</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            min-height: 100%;
+            width: 100%;
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: radial-gradient(circle at top center, #161e2b 0%, #08090a 80%);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Container designed with tight explicit gaps to prevent screen stretching */
+        .page-wrapper {
+            width: 100%;
+            max-width: 400px;
+            padding: 24px 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px; /* Controls exact gap between sections */
+            text-align: center;
+        }
+
+        /* 1. Main Header Title */
+        .header {
+            width: 100%;
+            padding-top: 6px; /* Prevents status bar cutoff */
+        }
+
+        .main-title {
+            font-size: 24px;
+            font-weight: 800;
+            line-height: 1.3;
+            color: #ffffff;
+        }
+
+        .highlight-wrapper {
+            position: relative;
+            display: inline-block;
+            color: #ffcc00;
+        }
+
+        /* Curved Line SVG Highlight */
+        .curved-line {
+            position: absolute;
+            bottom: -7px;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            overflow: visible;
+        }
+
+        /* 2. Brand / Logo Area */
+        .profile-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .avatar-glow {
+            position: relative;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            padding: 3px;
+            background: linear-gradient(135deg, #2bc5d3 0%, #2aabee 100%);
+            box-shadow: 0 0 18px rgba(43, 197, 211, 0.4);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #111;
+            display: block;
+        }
+
+        .brand-name {
+            font-size: 18px;
+            font-weight: 900;
+            color: #2bc5d3;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* 3. Compact Content / Features Card */
+        .features-card {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(8px);
+            border-radius: 14px;
+            padding: 14px 16px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .feature-item {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.3;
+            color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-icon {
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .feature-subtext {
+            display: block;
+            font-weight: 400;
+            font-size: 12px;
+            color: #a0a6b1;
+        }
+
+        /* 4. Action Button Area & Zoom Loop Animation */
+        .cta-area {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        @keyframes zoomLoop {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 4px 15px rgba(42, 171, 238, 0.35);
+            }
+            50% {
+                transform: scale(1.04);
+                box-shadow: 0 8px 25px rgba(42, 171, 238, 0.85);
+            }
+        }
+
+        .btn-tg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            width: 100%;
+            padding: 15px 16px;
+            background: linear-gradient(135deg, #2aabee 0%, #0088cc 100%);
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 800;
+            border-radius: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            animation: zoomLoop 2s infinite ease-in-out;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-tg svg {
+            width: 22px;
+            height: 22px;
+            fill: #ffffff;
+            flex-shrink: 0;
+        }
+
+        .cta-posttext {
+            font-size: 12px;
+            font-weight: 600;
+            color: #a0a6b1;
+        }
+
+        /* Screen sizing adjustments for smaller phones */
+        @media (max-height: 640px) {
+            .page-wrapper {
+                padding: 16px 14px;
+                gap: 12px;
+            }
+            .main-title {
+                font-size: 20px;
+            }
+            .avatar-glow {
+                width: 75px;
+                height: 75px;
+            }
+            .brand-name {
+                font-size: 15px;
+            }
+            .features-card {
+                padding: 10px 12px;
+                gap: 8px;
+            }
+            .feature-item {
+                font-size: 13px;
+            }
+            .btn-tg {
+                padding: 12px 14px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-wrapper">
+        
+        <!-- 1. Main Upper Heading -->
+        <div class="header">
+            <h1 class="main-title">
+                Join #1 <br>
+                <span class="highlight-wrapper">
+                    Global Trading Community
+                    <!-- Yellow Curved Vector Underline -->
+                    <svg class="curved-line" viewBox="0 0 250 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 3 14 Q 125 0 247 14" stroke="#FFCC00" stroke-width="5" stroke-linecap="round"/>
+                    </svg>
+                </span>
+            </h1>
+        </div>
+
+        <!-- 2. Logo & Brand Name -->
+        <div class="profile-area">
+            <div class="avatar-glow">
+                <img src="LOGO.PNG" alt="M T Logo" class="profile-img">
+            </div>
+            <div class="brand-name">M T</div>
+        </div>
+
+        <!-- 3. Content Features Card -->
+        <div class="features-card">
+            <div class="feature-item">
+                <span class="feature-icon"></span>
+                <div></div>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">👨‍💻</span>
+                <div>
+                    FREE Access to Live Sessions
+                    <span class="feature-subtext">Every single day</span>
+                </div>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">🧠</span>
+                <div>
+                    1-on-1 Mentorship
+                    <span class="feature-subtext">Psychology & Risk Management</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Telegram Join Button -->
+        <div class="cta-area">
+            <a href="https://t.me/+ktg0pgBd6DA5M2Rl" class="btn-tg">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.24-5.54 3.65-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.35-.49.97-.74 3.79-1.65 6.32-2.74 7.59-3.27 3.6-1.5 4.35-1.76 4.84-1.77.11 0 .35.03.51.16.13.1.17.24.19.34.02.06.02.21-.01.29z"/>
+                </svg>
+                JOIN FREE TELEGRAM CHANNEL
+            </a>
+            <div class="cta-posttext">🔒 100% Free Instant Access</div>
+             
+        </div>
+
+    </div>
+
+</body>
+</html>
 
